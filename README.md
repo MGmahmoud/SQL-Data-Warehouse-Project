@@ -92,7 +92,7 @@ Armed with skills in **SQL**, **Power BI**, **Excel**, and **Python**, I build r
 Currently, I’m focused on mastering data engineering and business intelligence by tackling real-world projects like this one. I believe in continuous learning and love sharing what I build to inspire and connect with others in the data community.
 
 Let’s connect on 
-[LinkedIn](https://www.linkedin.com/in/mahmoud-elhelaly/)
+[LinkedIn](https://www.linkedin.com/in/mahmoud--elhelaly/)
 or feel free to reach out if you're working on a project that needs a structured thinker and a passionate data enthusiast. 📊✨
 📧 elhelalymahmoud001@gmail.com  
 📞 +20 100 076 7912
