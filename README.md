@@ -87,12 +87,20 @@ This project is licensed under the [MIT License](LICENSE). You are free to use, 
 ## 🌟 About Me
 
 I'm **Mahmoud Elhelaly**, a data analyst with a passion for transforming raw numbers into strategic insights.
-Armed with skills in **SQL**, **Power BI**, **Excel**, and **Python**, I build robust data solutions—from clean data pipelines to interactive dashboards. I enjoy working on end-to-end data projects, especially those that require structured thinking, business understanding, and visual storytelling.
 
-Currently, I’m focused on mastering data engineering and business intelligence by tackling real-world projects like this one. I believe in continuous learning and love sharing what I build to inspire and connect with others in the data community.
+Armed with skills in **SQL**, **Power BI**, **Excel**, and **Python**, I build robust data solutions—from clean data pipelines to interactive dashboards.
+
+I enjoy working on end-to-end data projects, especially those that require structured thinking, business understanding, and visual storytelling.
+
+Currently, I’m focused on mastering data engineering and business intelligence by tackling real-world projects like this one.
+
+I believe in continuous learning and love sharing what I build to inspire and connect with others in the data community.
 
 Let’s connect on 
 [LinkedIn](https://www.linkedin.com/in/mahmoud--elhelaly/)
-or feel free to reach out if you're working on a project that needs a structured thinker and a passionate data enthusiast. 📊✨
-📧 elhelalymahmoud001@gmail.com  
-📞 +20 100 076 7912
+
+or feel free to reach out if you're working on a project that needs a structured thinker and a passionate data enthusiast.
+
+> 📧 elhelalymahmoud001@gmail.com
+> 
+>📞 +20 100 076 7912
