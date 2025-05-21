@@ -1,7 +1,6 @@
-
 # Data Warehouse and Analytics Project
 
-Welcome to the **Data Warehouse and Analytics Project** repository! 🚀  
+Welcome to the **Data Warehouse and Analytics Project** repository!
 This project demonstrates a comprehensive data warehousing and analytics solution, from building a data warehouse to generating actionable insights. Designed as a portfolio project, it highlights industry best practices in data engineering and analytics.
 
 ---
@@ -37,7 +36,7 @@ Develop a modern data warehouse using SQL Server to consolidate sales data, enab
 - **Data Sources**: Import data from two source systems (ERP and CRM) provided as CSV files.
 - **Data Quality**: Cleanse and resolve data quality issues prior to analysis.
 - **Integration**: Combine both sources into a single, user-friendly data model designed for analytical queries.
-- **Scope**: Focus on the latest dataset only; historization of data is not required.
+- **Scope**: Focus on the latest dataset only, historization of data is not required.
 - **Documentation**: Provide clear documentation of the data model to support both business stakeholders and analytics teams.
 
 ---
@@ -51,8 +50,6 @@ Develop SQL-based analytics to deliver detailed insights into:
 - **Sales Trends**
 
 These insights empower stakeholders with key business metrics, enabling strategic decision-making.  
-
-For more details, refer to [docs/requirements.md](docs/requirements.md).
 
 ## 📂 Repository Structure
 ```
@@ -89,13 +86,13 @@ This project is licensed under the [MIT License](LICENSE). You are free to use, 
 
 ## 🌟 About Me
 
-Hi there! I'm **Baraa Khatib Salkini**, also known as **Data With Baraa**. I’m an IT professional and passionate YouTuber on a mission to share knowledge and make working with data enjoyable and engaging!
+I'm **Mahmoud Elhelaly**, a data analyst with a passion for transforming raw numbers into strategic insights.
+Armed with skills in **SQL**, **Power BI**, **Excel**, and **Python**, I build robust data solutions—from clean data pipelines to interactive dashboards. I enjoy working on end-to-end data projects, especially those that require structured thinking, business understanding, and visual storytelling.
 
-Let's stay in touch! Feel free to connect with me on the following platforms:
+Currently, I’m focused on mastering data engineering and business intelligence by tackling real-world projects like this one. I believe in continuous learning and love sharing what I build to inspire and connect with others in the data community.
 
-[![YouTube](https://img.shields.io/badge/YouTube-red?style=for-the-badge&logo=youtube&logoColor=white)](http://bit.ly/3GiCVUE)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/baraa-khatib-salkini)
-[![Website](https://img.shields.io/badge/Website-000000?style=for-the-badge&logo=google-chrome&logoColor=white)](https://www.datawithbaraa.com)
-[![Newsletter](https://img.shields.io/badge/Newsletter-FF5722?style=for-the-badge&logo=substack&logoColor=white)](https://bit.ly/BaraaNewsletter)
-[![PayPal](https://img.shields.io/badge/PayPal-00457C?style=for-the-badge&logo=paypal&logoColor=white)](https://paypal.me/baraasalkini)
-[![Join](https://img.shields.io/badge/Join-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/@datawithbaraa)
+Let’s connect on 
+[LinkedIn](https://www.linkedin.com/in/mahmoud-elhelaly/)
+or feel free to reach out if you're working on a project that needs a structured thinker and a passionate data enthusiast. 📊✨
+📧 elhelalymahmoud001@gmail.com  
+📞 +20 100 076 7912
