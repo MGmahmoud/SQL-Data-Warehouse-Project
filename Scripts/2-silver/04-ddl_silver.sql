@@ -31,7 +31,7 @@ CREATE TABLE silver.crm_cust_info
 	cst_marital_status	NVARCHAR(50),
 	cst_gndr		NVARCHAR(50),
 	cst_create_date		DATE,
-	dwh_create_date	DATETIME2 DEFAULT GETDATE()
+	dwh_create_date		DATETIME2 DEFAULT GETDATE()
 );
 
 GO
@@ -51,7 +51,7 @@ CREATE TABLE silver.crm_prd_info
 	prd_line		NVARCHAR(50),
 	prd_start_dt		DATE,
 	prd_end_dt		DATE,
-	dwh_create_date	DATETIME2 DEFAULT GETDATE()
+	dwh_create_date		DATETIME2 DEFAULT GETDATE()
 );
 
 GO
@@ -72,7 +72,7 @@ CREATE TABLE silver.crm_sales_details
 	sls_sales		INT,
 	sls_quantity		INT,
 	sls_price		INT,
-	dwh_create_date	DATETIME2 DEFAULT GETDATE()
+	dwh_create_date		DATETIME2 DEFAULT GETDATE()
 );
 
 GO
@@ -88,7 +88,7 @@ CREATE TABLE silver.erp_cust_az12
 	cid			NVARCHAR(50),
 	bdate			DATE,
 	gen			NVARCHAR(50),
-	dwh_create_date	DATETIME2 DEFAULT GETDATE()
+	dwh_create_date		DATETIME2 DEFAULT GETDATE()
 );
 
 GO
@@ -102,7 +102,7 @@ CREATE TABLE silver.erp_loc_a101
 (
 	cid			NVARCHAR(50),
 	cntry			NVARCHAR(50),
-	dwh_create_date	DATETIME2 DEFAULT GETDATE()
+	dwh_create_date		DATETIME2 DEFAULT GETDATE()
 );
 
 GO
@@ -118,7 +118,7 @@ CREATE TABLE silver.erp_px_cat_g1v2
 	cat			NVARCHAR(50),
 	subcat			NVARCHAR(50),
 	maintenance		NVARCHAR(50),
-	dwh_create_date	DATETIME2 DEFAULT GETDATE()
+	dwh_create_date		DATETIME2 DEFAULT GETDATE()
 );
 
 GO
