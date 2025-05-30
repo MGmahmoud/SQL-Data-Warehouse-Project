@@ -1,15 +1,26 @@
-/*
+﻿/*
 ===============================================================================
+Stored Procedure: Load Bronze Layer (CSVs -> Bronze)
+===============================================================================
+
 Script Purpose:
-    This Script Creates Stored Procedure To Load The Data Into The 'Bronze Layer' Tables, Truncating Existing Tables. 
-    Run Exec Command Only In This Script To Load The Data Into 'Bronze Layer' Tables
-=============================================================================== 
-Warning:
-    Running This Script Will Truncate The Entire 'Bronze Schema Tables' If They Exist.
-    All Data In The 'Bronze Layer' Tables Will Be Permanently Deleted And Replaced With New One.
-    Proceed With Caution And Ensure You Have Proper Backups Before Running This Script.
+    This Stored Procedure Performs The EL (Extract, Load) Process To Populate  
+    The 'Bronze' Schema Tables From CSV Files.
+
+Actions Performed:
+    - Truncates 'Bronze' Tables  
+    - Inserts Data From CSV Files Into 'Bronze' Tables
+
+Parameters:
+    - None  
+    This Stored Procedure Doesn't Accept Any Parameters Or Return Any Values.
+
+Usage Example:
+    - EXEC bronze.load_bronze
+
 ===============================================================================
 */
+
 
 USE DataWarehouse;
 GO

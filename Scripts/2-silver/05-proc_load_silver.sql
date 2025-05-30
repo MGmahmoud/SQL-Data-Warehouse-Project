@@ -1,13 +1,23 @@
 /*
 ===============================================================================
+Stored Procedure: Load Silver Layer (Bronze -> Silver)
+===============================================================================
+
 Script Purpose:
-    This Script Creates Stored Procedure To Load The Data Into The 'Silver Layer' Tables, Truncating Existing Tables. 
-    Run Exec Command Only In This Script To Load The Data Into 'Silver Layer' Tables
-===============================================================================    
-Warning:
-    Running This Script Will Truncate The Entire 'Silver Schema Tables' If They Exist.
-    All Data In The 'Silver Layer' Tables Will Be Permanently Deleted And Replaced With New One.
-    Proceed With Caution And Ensure You Have Proper Backups Before Running This Script.
+    This Stored Procedure Performs The ETL (Extract, Transform, Load) Process To Populate  
+    The 'Silver' Schema Tables From Bronze Tables.
+
+Actions Performed:
+    - Truncates 'Silver' Tables  
+    - Inserts Data From Bronze Tables Into 'Silver' Tables
+
+Parameters:
+    - None  
+    This Stored Procedure Doesn't Accept Any Parameters Or Return Any Values.
+
+Usage Example:
+    - EXEC Silver.load_Silver
+
 ===============================================================================
 */
 
@@ -27,7 +37,7 @@ BEGIN
         SET @batch_start_time = GETDATE();
 
         PRINT '============================================================================';
-        PRINT 'Loading Bronze Layer';
+        PRINT 'Loading Silver Layer';
         PRINT '============================================================================';
 
         PRINT '---------------------------------------------------------------------------';
