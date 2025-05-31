@@ -4,19 +4,19 @@ Stored Procedure: Load Silver Layer (Bronze -> Silver)
 ===============================================================================
 
 Script Purpose:
-    This Stored Procedure Performs The ETL (Extract, Transform, Load) Process To Populate  
-    The 'Silver' Schema Tables From Bronze Tables.
+    This stored procedure performs the ETL (Extract, Transform, Load) process to populate  
+    the 'Silver' schema tables from Bronze tables.
 
 Actions Performed:
-    - Truncates 'Silver' Tables  
-    - Inserts Data From Bronze Tables Into 'Silver' Tables
+    - Truncates 'Silver' tables  
+    - Inserts data from Bronze tables into 'Silver' tables
 
 Parameters:
     - None  
-    This Stored Procedure Doesn't Accept Any Parameters Or Return Any Values.
+    This stored procedure doesn't accept any parameters or return any values.
 
 Usage Example:
-    - EXEC Silver.load_Silver
+    - EXEC Silver.Load_Silver
 
 ===============================================================================
 */
@@ -44,7 +44,7 @@ BEGIN
         PRINT 'Loading CRM Tables';
         PRINT '---------------------------------------------------------------------------';
 
-        -- Load The 'Crm_Cust_Info' Table
+        -- Load the 'Crm_Cust_Info' table
         SET @start_time = GETDATE();
 
         PRINT '>> Truncating Table: Silver.Crm_Cust_Info';
@@ -69,13 +69,13 @@ BEGIN
             CASE
                 WHEN UPPER(TRIM(cst_marital_status)) = 'M' THEN 'Married'
                 WHEN UPPER(TRIM(cst_marital_status)) = 'S' THEN 'Single'
-                ELSE 'n/a'
-            END AS cst_marital_status,  -- Normalize Marital Status Value To Readable Format
+                ELSE 'N/A'
+            END AS cst_marital_status,  -- Normalize marital status value to readable format
             CASE
                 WHEN UPPER(TRIM(cst_gndr)) = 'M' THEN 'Male'
                 WHEN UPPER(TRIM(cst_gndr)) = 'F' THEN 'Female'
-                ELSE 'n/a'
-            END AS cst_gndr,  -- Normalize Gender Value To Readable Format
+                ELSE 'N/A'
+            END AS cst_gndr,  -- Normalize gender value to readable format
             cst_create_date
         FROM
         (
@@ -85,13 +85,13 @@ BEGIN
             FROM Bronze.Crm_Cust_Info
             WHERE cst_id IS NOT NULL
         ) t
-        WHERE flag_last = 1;  -- Select The Most Recent Record Per Customer
+        WHERE flag_last = 1;  -- Select the most recent record per customer
 
         SET @end_time = GETDATE();
         PRINT '>> Load Duration: ' + CAST(DATEDIFF(SECOND, @start_time, @end_time) AS NVARCHAR) + ' seconds';
         PRINT '>> ------------------------------------------------';
 
-        -- Load The 'Prd_Info' Table
+        -- Load the 'Prd_Info' table
         SET @start_time = GETDATE();
 
         PRINT '>> Truncating Table: Silver.Crm_Prd_Info';
@@ -111,8 +111,8 @@ BEGIN
         )
         SELECT
             prd_id,
-            SUBSTRING(prd_key, 7, LEN(prd_key)) AS prd_key,  -- Extract Product Key
-            REPLACE(SUBSTRING(prd_key, 1, 5), '-', '_') AS prd_cat_id,  -- Extract Category Id
+            SUBSTRING(prd_key, 7, LEN(prd_key)) AS prd_key,  -- Extract product key
+            REPLACE(SUBSTRING(prd_key, 1, 5), '-', '_') AS prd_cat_id,  -- Extract category ID
             prd_nm,
             ISNULL(prd_cost, 0) AS prd_cost,
             CASE UPPER(TRIM(prd_line))
@@ -120,17 +120,17 @@ BEGIN
                 WHEN 'R' THEN 'Road'
                 WHEN 'S' THEN 'Other Sales'
                 WHEN 'T' THEN 'Touring'
-                ELSE 'n/a'
-            END AS prd_line,  -- Map Product Line Codes To Descriptive Values
+                ELSE 'N/A'
+            END AS prd_line,  -- Map product line codes to descriptive values
             prd_start_dt,
-            DATEADD(DAY, -1, LEAD(prd_start_dt) OVER (PARTITION BY prd_key ORDER BY prd_start_dt ASC)) AS prd_end_dt  -- Calculate End Date As One Day Before The Next Start Date
+            DATEADD(DAY, -1, LEAD(prd_start_dt) OVER (PARTITION BY prd_key ORDER BY prd_start_dt ASC)) AS prd_end_dt  -- Calculate end date as one day before the next start date
         FROM Bronze.Crm_Prd_Info;
 
         SET @end_time = GETDATE();
         PRINT '>> Load Duration: ' + CAST(DATEDIFF(SECOND, @start_time, @end_time) AS NVARCHAR) + ' seconds';
         PRINT '>> ------------------------------------------------';
 
-        -- Load The 'Sales_Details' Table
+        -- Load the 'Sales_Details' table
         SET @start_time = GETDATE();
 
         PRINT '>> Truncating Table: Silver.Crm_Sales_Details';
@@ -167,12 +167,12 @@ BEGIN
             END AS sls_due_dt,
             CASE 
                 WHEN sls_price <= 0 OR sls_price IS NULL THEN sls_sales / NULLIF(sls_quantity, 0)
-                ELSE sls_price  -- Drive Price If Original Value Is Invalid
+                ELSE sls_price  -- Derive price if original value is invalid
             END AS sls_price,
             sls_quantity,
             CASE 
                 WHEN sls_sales <= 0 OR sls_sales IS NULL OR sls_sales != sls_quantity * sls_price THEN sls_quantity * ABS(sls_price)
-                ELSE sls_sales  -- Recalculate Sales If Original Value Is Missing Or Incorrect
+                ELSE sls_sales  -- Recalculate sales if original value is missing or incorrect
             END AS sls_sales
         FROM Bronze.Crm_Sales_Details;
 
@@ -184,7 +184,7 @@ BEGIN
         PRINT 'Loading ERP Tables';
         PRINT '---------------------------------------------------------------------------';
 
-        -- Load The 'Cust_Az12' Table
+        -- Load the 'Cust_Az12' table
         SET @start_time = GETDATE();
 
         PRINT '>> Truncating Table: Silver.Erp_Cust_Az12';
@@ -209,7 +209,7 @@ BEGIN
             CASE
                 WHEN UPPER(TRIM(gen)) IN ('M', 'MALE') THEN 'Male'
                 WHEN UPPER(TRIM(gen)) IN ('F', 'FEMALE') THEN 'Female'
-                ELSE 'n/a'
+                ELSE 'N/A'
             END AS gen
         FROM Bronze.Erp_Cust_Az12;
 
@@ -217,7 +217,7 @@ BEGIN
         PRINT '>> Load Duration: ' + CAST(DATEDIFF(SECOND, @start_time, @end_time) AS NVARCHAR) + ' seconds';
         PRINT '>> ------------------------------------------------';
 
-        -- Load The 'Loc_A101' Table
+        -- Load the 'Loc_A101' table
         SET @start_time = GETDATE();
 
         PRINT '>> Truncating Table: Silver.Erp_Loc_A101';
@@ -234,16 +234,16 @@ BEGIN
             CASE 
                 WHEN TRIM(cntry) IN ('USA', 'US') THEN 'United States'
                 WHEN TRIM(cntry) = 'DE' THEN 'Germany'
-                WHEN TRIM(cntry) IS NULL OR TRIM(cntry) = '' THEN 'n/a'
+                WHEN TRIM(cntry) IS NULL OR TRIM(cntry) = '' THEN 'N/A'
                 ELSE TRIM(cntry)
-            END AS cntry  -- Normalize And Handle Missing Or Blank Country Code
+            END AS cntry  -- Normalize and handle missing or blank country code
         FROM Bronze.Erp_Loc_A101;
 
         SET @end_time = GETDATE();
         PRINT '>> Load Duration: ' + CAST(DATEDIFF(SECOND, @start_time, @end_time) AS NVARCHAR) + ' seconds';
         PRINT '>> ------------------------------------------------';
 
-        -- Load The 'Px_Cat_G1v2' Table
+        -- Load the 'Px_Cat_G1v2' table
         SET @start_time = GETDATE();
 
         PRINT '>> Truncating Table: Silver.Erp_Px_Cat_G1v2';

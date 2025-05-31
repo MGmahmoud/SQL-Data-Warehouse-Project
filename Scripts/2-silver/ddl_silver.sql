@@ -3,21 +3,21 @@
 DDL Script: Create Silver Tables
 ===============================================================================
 Script Purpose:
-    This Script Creates Tables In The 'Silver' Schema, Dropping Existing Tables 
-    If They Already Exist.
-    Run This Script To Re-Define The DDL Structure Of 'Silver' Tables.
+    This script creates tables in the 'Silver' schema, dropping existing tables 
+    if they already exist.
+    Run this script to re-define the DDL structure of 'Silver' tables.
 ===============================================================================
 Warning:
-    Running This Script Will Drop All Existing Tables In The 'Silver' Schema.
-    All Existing Data In These Tables Will Be Permanently Deleted.
-    Proceed With Caution And Ensure Proper Backups Are In Place.
+    Running this script will drop all existing tables in the 'Silver' schema.
+    All existing data in these tables will be permanently deleted.
+    Proceed with caution and ensure proper backups are in place.
 ===============================================================================
 */
 
 USE DataWarehouse;
 GO
 
--- Create The 'Crm_Cust_Info' Table
+-- Create the 'crm_cust_info' table
 IF OBJECT_ID('silver.crm_cust_info', 'U') IS NOT NULL
     DROP TABLE silver.crm_cust_info;
 GO
@@ -35,7 +35,7 @@ CREATE TABLE silver.crm_cust_info
 );
 GO
 
--- Create The 'Crm_Prd_Info' Table
+-- Create the 'crm_prd_info' table
 IF OBJECT_ID('silver.crm_prd_info', 'U') IS NOT NULL
     DROP TABLE silver.crm_prd_info;
 GO
@@ -54,7 +54,7 @@ CREATE TABLE silver.crm_prd_info
 );
 GO
 
--- Create The 'Crm_Sales_Details' Table
+-- Create the 'crm_sales_details' table
 IF OBJECT_ID('silver.crm_sales_details', 'U') IS NOT NULL
     DROP TABLE silver.crm_sales_details;
 GO
@@ -74,7 +74,7 @@ CREATE TABLE silver.crm_sales_details
 );
 GO
 
--- Create The 'Erp_Cust_Az12' Table
+-- Create the 'erp_cust_az12' table
 IF OBJECT_ID('silver.erp_cust_az12', 'U') IS NOT NULL
     DROP TABLE silver.erp_cust_az12;
 GO
@@ -88,7 +88,7 @@ CREATE TABLE silver.erp_cust_az12
 );
 GO
 
--- Create The 'Erp_Loc_A101' Table
+-- Create the 'erp_loc_a101' table
 IF OBJECT_ID('silver.erp_loc_a101', 'U') IS NOT NULL
     DROP TABLE silver.erp_loc_a101;
 GO
@@ -101,7 +101,7 @@ CREATE TABLE silver.erp_loc_a101
 );
 GO
 
--- Create The 'Erp_Px_Cat_G1V2' Table
+-- Create the 'erp_px_cat_g1v2' table
 IF OBJECT_ID('silver.erp_px_cat_g1v2', 'U') IS NOT NULL
     DROP TABLE silver.erp_px_cat_g1v2;
 GO
