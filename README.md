@@ -21,6 +21,9 @@ This project involves:
 ---
 ## Data Model 
 
+Before writing a single line of SQL, I explored the data sources to understand their content and interrelationships.
+Then designed a Data Integration Diagram to visualize the source systems and how they connect, making it easy to grasp the structure at a glance.
+
 ![DWH-Integration Model](https://github.com/user-attachments/assets/dc0c6f7c-a266-4fc2-9971-c81dd0d1a51a)
 ---
 
@@ -35,7 +38,13 @@ The data architecture for this project follows Medallion Architecture **Bronze**
 
 ---
 ## Data Flow 
+To clearly communicate how data moves through the architecture, I built a Data Flow Diagram. It maps each source to its destination:
 
+* dim_customers is built from 3 tables
+* dim_products is created from 2 tables
+* fact_sales is derived from 1 primary source
+
+This diagram makes it easier to trace the lineage of each table and understand dependencies within the model.
 ![DWH-Data Flow](https://github.com/user-attachments/assets/ee6ddcda-7a16-4f02-9ece-22cb65a749a4)
 
 ---
