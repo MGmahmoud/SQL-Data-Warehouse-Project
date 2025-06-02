@@ -18,7 +18,7 @@ This project involves:
 3. **Data Modeling**: Developing fact and dimension tables optimized for analytical queries.
 
 ---
-## Data Model 
+## Data Integration 
 
 I explored the data sources to understand their content and interrelationships.
 Then designed a Data Integration Diagram to visualize the source systems and how they connect, making it easy to grasp the structure at a glance.
