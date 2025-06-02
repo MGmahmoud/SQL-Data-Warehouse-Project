@@ -16,7 +16,7 @@ Parameters:
     This stored procedure doesn't accept any parameters or return any values.
 
 Usage Example:
-    - EXEC Silver.Load_Silver
+    - EXEC silver.load_silver
 
 ===============================================================================
 */
