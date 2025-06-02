@@ -24,7 +24,7 @@ Usage Example:
 USE DataWarehouse;
 GO
 
-CREATE OR ALTER PROCEDURE Silver.Load_Silver
+CREATE OR ALTER PROCEDURE silver.load_silver
 AS
 BEGIN
     DECLARE 
