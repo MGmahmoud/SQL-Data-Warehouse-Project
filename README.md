@@ -62,10 +62,14 @@ The data architecture for this project follows Medallion Architecture **Bronze**
 ![DWH-Data Flow](https://github.com/user-attachments/assets/ee6ddcda-7a16-4f02-9ece-22cb65a749a4)
 
 ---
-## Data Integration Model 
+## Data Mart
+
+![DWH-Sales Data Mart](https://github.com/user-attachments/assets/bc478708-f135-4c54-9fa4-0ad291e78f08)
+
+---
+## Data Model 
 
 ![DWH-Integration Model](https://github.com/user-attachments/assets/dc0c6f7c-a266-4fc2-9971-c81dd0d1a51a)
-
 ---
 ## 🌟 About Me
 
