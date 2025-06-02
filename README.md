@@ -39,9 +39,11 @@ The data architecture for this project follows Medallion Architecture **Bronze**
 ---
 ## Data Flow 
 To clearly communicate how data moves through the architecture, I built a Data Flow Diagram. It maps each source to its destination:
+
 * dim_customers is built from 3 tables
 * dim_products is created from 2 tables
 * fact_sales is derived from 1 primary source
+
 This diagram makes it easier to trace the lineage of each table and understand dependencies within the model.
 
 ![DWH-Data Flow](https://github.com/user-attachments/assets/ee6ddcda-7a16-4f02-9ece-22cb65a749a4)
@@ -49,9 +51,11 @@ This diagram makes it easier to trace the lineage of each table and understand d
 ---
 ## Data Mart
 The final layer is a well-designed Data Mart using a Star Schema that supports fast querying and business-friendly reporting:
+
 * dim_customers: Enriched with geographic and demographic info
 * dim_products: Merged from product and category details
 * fact_sales: The central table containing sales transactions with foreign keys to dimension tables
+
 I’ve also defined clear relationships and documented key measures to ensure accurate interpretation of metrics during analysis.
 
 ![DWH-Sales Data Mart](https://github.com/user-attachments/assets/bc478708-f135-4c54-9fa4-0ad291e78f08)
