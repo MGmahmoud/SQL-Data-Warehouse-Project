@@ -47,6 +47,11 @@ This project involves:
 4. **Analytics & Reporting**: Creating SQL-based reports and dashboards for actionable insights.
 
 ---
+## Data Model 
+
+![DWH-Integration Model](https://github.com/user-attachments/assets/dc0c6f7c-a266-4fc2-9971-c81dd0d1a51a)
+---
+
 ## 🏗️ Data Architecture
 
 The data architecture for this project follows Medallion Architecture **Bronze**, **Silver**, and **Gold** layers:
@@ -67,10 +72,7 @@ The data architecture for this project follows Medallion Architecture **Bronze**
 ![DWH-Sales Data Mart](https://github.com/user-attachments/assets/bc478708-f135-4c54-9fa4-0ad291e78f08)
 
 ---
-## Data Model 
 
-![DWH-Integration Model](https://github.com/user-attachments/assets/dc0c6f7c-a266-4fc2-9971-c81dd0d1a51a)
----
 ## 🌟 About Me
 
 I'm **Mahmoud Elhelaly**, a data analyst with a passion for transforming raw numbers into strategic insights.
