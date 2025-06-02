@@ -9,34 +9,6 @@
 
 ---
 
-## 📂 Repository Structure
-```
-Data-Warehouse-Project/
-│
-├── datasets/                           # Raw datasets used for the project (ERP and CRM data)
-│
-├── docs/                               # Project documentation and architecture details
-│   ├── data_architecture.png           # Draw.io file shows the project's architecture
-│   ├── data_integration.png            # Draw.io file shows how the data files are related
-│   ├── data_flow.png                   # Draw.io file for the data flow diagram
-│   ├── data_models.png                 # Draw.io file for data models (star schema)
-│   ├── data_catalog.md                 # Catalog of datasets, including field descriptions and metadata
-│   ├── naming-conventions.md           # Consistent naming guidelines for tables, columns, and files
-│
-├── scripts/                            # SQL scripts for ETL and transformations
-│   ├── bronze/                         # Scripts for extracting and loading raw data
-│   ├── silver/                         # Scripts for cleaning and transforming data
-│   ├── gold/                           # Scripts for creating analytical models
-│
-├── tests/                              # Test scripts and quality files
-│
-├── README.md                           # Project overview and instructions
-├── LICENSE                             # License information for the repository
-
-```
-
----
-
 ## 📖 Project Overview
 
 This project involves:
@@ -71,6 +43,33 @@ The data architecture for this project follows Medallion Architecture **Bronze**
 
 ![DWH-Sales Data Mart](https://github.com/user-attachments/assets/bc478708-f135-4c54-9fa4-0ad291e78f08)
 
+---
+
+## 📂 Repository Structure
+```
+Data-Warehouse-Project/
+│
+├── datasets/                           # Raw datasets used for the project (ERP and CRM data)
+│
+├── docs/                               # Project documentation and architecture details
+│   ├── data_architecture.png           # Draw.io file shows the project's architecture
+│   ├── data_integration.png            # Draw.io file shows how the data files are related
+│   ├── data_flow.png                   # Draw.io file for the data flow diagram
+│   ├── data_models.png                 # Draw.io file for data models (star schema)
+│   ├── data_catalog.md                 # Catalog of datasets, including field descriptions and metadata
+│   ├── naming-conventions.md           # Consistent naming guidelines for tables, columns, and files
+│
+├── scripts/                            # SQL scripts for ETL and transformations
+│   ├── bronze/                         # Scripts for extracting and loading raw data
+│   ├── silver/                         # Scripts for cleaning and transforming data
+│   ├── gold/                           # Scripts for creating analytical models
+│
+├── tests/                              # Test scripts and quality files
+│
+├── README.md                           # Project overview and instructions
+├── LICENSE                             # License information for the repository
+
+```
 ---
 
 ## 🌟 About Me
