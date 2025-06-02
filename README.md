@@ -20,7 +20,7 @@ This project involves:
 ---
 ## Data Model 
 
-Before writing a single line of SQL, I explored the data sources to understand their content and interrelationships.
+I explored the data sources to understand their content and interrelationships.
 Then designed a Data Integration Diagram to visualize the source systems and how they connect, making it easy to grasp the structure at a glance.
 
 ![DWH-Integration Model](https://github.com/user-attachments/assets/dc0c6f7c-a266-4fc2-9971-c81dd0d1a51a)
