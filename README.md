@@ -9,7 +9,7 @@
 
 ---
 
-## 📖 Project Overview
+## Project Overview
 
 This project involves:
 
@@ -26,7 +26,7 @@ Then designed a Data Integration Diagram to visualize the source systems and how
 ![DWH-Integration Model](https://github.com/user-attachments/assets/dc0c6f7c-a266-4fc2-9971-c81dd0d1a51a)
 ---
 
-## 🏗️ Data Architecture
+## Data Architecture
 
 The data architecture for this project follows Medallion Architecture **Bronze**, **Silver**, and **Gold** layers:
 ![DWH Architecture](https://github.com/user-attachments/assets/0613a37f-e13e-47f1-94a6-0a04baba3545)
