@@ -7,7 +7,7 @@ Purpose:
     - To identify top performers or laggards.
 
 SQL Concepts Used:
-    - Window Ranking Functions: RANK(), DENSE_RANK(), ROW_NUMBER()
+    - Window Ranking Functions: DENSE_RANK(), ROW_NUMBER()
     - TOP Clause
     - GROUP BY, ORDER BY
 ===============================================================================
