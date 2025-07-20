@@ -141,5 +141,6 @@ I believe in continuous learning and love sharing what I build to inspire and co
 
 Let’s connect on  
 > [LinkedIn](https://www.linkedin.com/in/mahmoud--elhelaly/)
+> 
 > 📧 elhelalymahmoud001@gmail.com  
 > 📞 +20 100 076 7912
