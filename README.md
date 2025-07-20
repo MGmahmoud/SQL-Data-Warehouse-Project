@@ -139,8 +139,6 @@ Currently, I’m focused on mastering data engineering and business intelligence
 
 I believe in continuous learning and love sharing what I build to inspire and connect with others in the data community.
 
-Let’s connect on  
-> [LinkedIn](https://www.linkedin.com/in/mahmoud--elhelaly/)
-> 
+Let’s connect on: [LinkedIn](https://www.linkedin.com/in/mahmoud--elhelaly/) 
 > 📧 elhelalymahmoud001@gmail.com  
 > 📞 +20 100 076 7912
